@@ -10,7 +10,9 @@ export class User {
     lastName: string;
     @Column()
     phonenumber: string;
-    @Column()
+    @Column({
+        unique:true
+    })
     email: string;
     @Column({ default: true })
     isActive: boolean;
